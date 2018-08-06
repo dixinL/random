@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+<script>
+    function rand() {
+        $.ajax({
+            url : "rand.php",
+            type : "post",
+            data : "none",
+            success : function(json){
+                alert(json);
+            },
+            error : function () {
+                alert("未知错误");
+            }
+        });
+    }
+</script>
+<button onclick="rand()">创建随机数</button>
+</body>
+</html>
